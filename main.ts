@@ -22,9 +22,14 @@ radio.onReceivedNumber(function (receivedNumber) {
 
 
     } else if (receivedNumber == 3) {
-        bitbot.rotate(BBRobotDirection.Left, 40)
+        if (motor == 1) {
+            bitbot.rotate(BBRobotDirection.Left, 40)
+        }
     } else if (receivedNumber == 4) {
-        bitbot.rotate(BBRobotDirection.Right, 40)
+        if (motor == 1) {
+            bitbot.rotate(BBRobotDirection.Right, 40)
+        }
+
 
     } else if (receivedNumber == 11) {
         bitbot.setLedColor(0xffffff)
