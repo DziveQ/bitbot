@@ -10,10 +10,14 @@ radio.onReceivedNumber(function (receivedNumber) {
     } else if (receivedNumber == 2) {
         if (motor == 0) {
             motor = 1
-            music.startMelody(music.builtInMelody(Melodies.BaDing), MelodyOptions.Once)
+            bitbot.buzz(true)
+            basic.pause(100)
+            bitbot.buzz(false)
         } else if (motor == 1) {
             motor = 0
-            music.startMelody(music.builtInMelody(Melodies.BaDing), MelodyOptions.Once)
+            bitbot.buzz(true)
+            basic.pause(100)
+            bitbot.buzz(false)
         }
     } else if (receivedNumber == 11) {
         bitbot.setLedColor(0xffffff)
@@ -25,3 +29,4 @@ radio.onReceivedNumber(function (receivedNumber) {
 })
 let motor = 0
 radio.setGroup(5)
+
