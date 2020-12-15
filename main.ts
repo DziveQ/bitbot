@@ -21,7 +21,8 @@ radio.onReceivedNumber(function (receivedNumber) {
         }
     } else if (receivedNumber == 3) {
         if (motor == 1) {
-            bitbot.rotatems(BBRobotDirection.Left, 60, 100)
+            bitbot.motor(BBMotor.Right, 759)
+            bitbot.motor(BBMotor.Left, 200)
         }
     } else if (receivedNumber == 4) {
         if (motor == 1) {
