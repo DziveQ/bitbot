@@ -19,18 +19,14 @@ radio.onReceivedNumber(function (receivedNumber) {
             basic.pause(100)
             bitbot.buzz(false)
         }
-
-
     } else if (receivedNumber == 3) {
         if (motor == 1) {
-            bitbot.rotate(BBRobotDirection.Left, 40)
+            bitbot.rotatems(BBRobotDirection.Left, 60, 100)
         }
     } else if (receivedNumber == 4) {
         if (motor == 1) {
-            bitbot.rotate(BBRobotDirection.Right, 40)
+            bitbot.rotatems(BBRobotDirection.Right, 60, 100)
         }
-
-
     } else if (receivedNumber == 11) {
         bitbot.setLedColor(0xffffff)
     } else if (receivedNumber == 12) {
@@ -41,4 +37,3 @@ radio.onReceivedNumber(function (receivedNumber) {
 })
 let motor = 0
 radio.setGroup(5)
-
